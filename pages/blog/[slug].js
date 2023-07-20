@@ -87,7 +87,7 @@ const singleBlog = ({ blog }) => {
 export default singleBlog;
 
 export async function getServerSideProps({ params }) {
-  const response = await fetch(`http://localhost:3000/api/blog/${params.slug}`);
+  const response = await fetch(`https://next-blog-liard-theta-11.vercel.app//api/blog/${params.slug}`);
   const data = await response.json();
   return { props: { blog: data } };
 }

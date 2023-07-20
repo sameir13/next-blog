@@ -25,7 +25,7 @@ const index = ({ data }) => {
 export default index;
 
 export async function getServerSideProps() {
-  const response = await fetch("http://localhost:3000/api/getallblogs");
+  const response = await fetch("https://next-blog-liard-theta-11.vercel.app//api/getallblogs");
   const data = await response.json();
   return { props: { data } };
 }
