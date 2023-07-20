@@ -33,7 +33,7 @@ const singleBlog = ({ blog }) => {
             <div className="py-10">
               <Image
                 src={blog.singleBlog.avatar}
-                alt=""
+                alt="Image"
                 width={900}
                 height={600}
               />

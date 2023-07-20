@@ -23,7 +23,7 @@ function Post() {
         <Link href={"/"}>
           <Image
             src={"/images/new.jpg"}
-            alt=""
+            alt="Image"
             className="rounded"
             height={250}
             width={200}

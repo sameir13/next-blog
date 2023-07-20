@@ -39,7 +39,7 @@ function Post() {
             className="rounded"
             height={350}
             width={300}
-            alt=""
+            alt="Image"
           />
         </Link>
       </div>
