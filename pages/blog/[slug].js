@@ -3,7 +3,6 @@ import Format from "../../layout/format";
 import Image from "next/image";
 import Related from "../../components/_child/related";
 import { useState } from "react";
-import ReactReadMoreReadLess from "react-read-more-read-less";
 const singleBlog = ({ blog }) => {
   const [edit, setEdit] = useState(blog.singleBlog);
   const [selected, setSelected] = useState(false);
