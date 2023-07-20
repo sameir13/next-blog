@@ -25,9 +25,6 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.9.0",
-    "react-read-more": "^1.0.0",
-    "react-read-more-read-less": "^1.0.7",
-    "read-more-react": "^1.0.10",
     "swiper": "^9.4.1"
   },
   "devDependencies": {
