@@ -28,7 +28,7 @@ const Header = () => {
               <Link className="nav-links" href="/">
                 Home
               </Link>
-              <Link className="nav-links" href="/">
+              <Link className="nav-links" href="/about">
                 About
               </Link>
               <Link className="nav-links" href="/create">
@@ -40,7 +40,14 @@ const Header = () => {
               <span
                 children
                 className="nav-links"
-                style={{ cursor: "pointer", border:"1px solid #56B85D" , backgroundColor:"#56B85D", padding:"3px 10px", color:"white",borderRadius:"5px" }}
+                style={{
+                  cursor: "pointer",
+                  border: "1px solid #56B85D",
+                  backgroundColor: "#56B85D",
+                  padding: "3px 10px",
+                  color: "white",
+                  borderRadius: "5px",
+                }}
                 onClick={HandleSignOut}
               >
                 Log out
@@ -48,30 +55,33 @@ const Header = () => {
             </div>
           ) : (
             <>
-            <div className="nav-links-logout">
-            <Link className="nav-links" href="/">
-                Home
-              </Link>
-              <Link className="nav-links" href="/About">
-                About
-              </Link>
-              <Link
-                href={"/login"}
-                
-                className="nav-links"
-                style={{ cursor: "pointer", border:"1px solid #56B85D" , backgroundColor:"#56B85D", padding:"3px 10px", color:"white",borderRadius:"5px" }}
-              >
-                Login
-              </Link>
-
-            </div>
-          
+              <div className="nav-links-logout">
+                <Link className="nav-links" href="/">
+                  Home
+                </Link>
+                <Link className="nav-links" href={"/about"}>
+                  About
+                </Link>
+                <Link
+                  href={"/login"}
+                  className="nav-links"
+                  style={{
+                    cursor: "pointer",
+                    border: "1px solid #56B85D",
+                    backgroundColor: "#56B85D",
+                    padding: "3px 10px",
+                    color: "white",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Login
+                </Link>
+              </div>
             </>
           )}
 
           <div className="HeaderHamMenu">
-          <i class="fa-solid fa-bars"></i> 
-
+            <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
       </div>

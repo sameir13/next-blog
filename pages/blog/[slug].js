@@ -58,7 +58,6 @@ const singleBlog = ({ blog }) => {
               </>
             </div>
           </div>
-          <Related></Related>
         </section>
       </Format>
     </div>
