@@ -1,0 +1,27 @@
+
+.MainSec2CardGrid{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width:1024px) {
+
+    .MainSec2CardGrid{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+}
+@media (max-width:600px) {
+
+    .MainSec2CardGrid{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+}

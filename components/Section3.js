@@ -1,18 +1,73 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Link from "next/link";
 
 const Section3 = () => {
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
-    <section className="container mx-auto md:px-20 py-16">
+    <section className="MainSectionGrid MaxPad">
       <h1 className="font-bold text-4xl py-12 text-center">Most Popular</h1>
-      <Swiper slidesPerView={2}>
-        <SwiperSlide> {Post()}</SwiperSlide>
-        <SwiperSlide> {Post()}</SwiperSlide>
-        <SwiperSlide> {Post()}</SwiperSlide>
-        <SwiperSlide> {Post()}</SwiperSlide>
-        <SwiperSlide> {Post()}</SwiperSlide>
-      </Swiper>
+      <Slider {...settings} className="MainSliderSection3">
+          <div>
+         { Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+          <div>
+        {  Post()}
+          </div>
+        </Slider>
     </section>
   );
 };
@@ -35,7 +90,7 @@ function Post() {
         <div className="title">
           <Link
             href={"/SinglePost"}
-            className="text-1xl md:text-2xl font-bold text-gray-800 hover:text-gray-600"
+            className="SingleBlogMainTitle"
           >
             Your most unhappy customers are your greatest source of of learning
           </Link>

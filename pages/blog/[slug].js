@@ -5,19 +5,14 @@ import Related from "../../components/_child/related";
 import { useState } from "react";
 const singleBlog = ({ blog }) => {
   const [edit, setEdit] = useState(blog.singleBlog);
-  const [selected, setSelected] = useState(false);
   function createMarkup(c) {
     return { __html: c };
   }
 
-  const handle = () => {
-    setSelected(!selected);
-  };
-
   return (
     <div>
       <Format>
-        <section className="container mx-auto md:px-2 py-16 w-1/2">
+        <section className="MaxPad">
           <div className="flex justify-center">
             <Author></Author>
           </div>
@@ -29,52 +24,38 @@ const singleBlog = ({ blog }) => {
             <p className="text-gray-500 text-xl text-center py-5">
               {blog.singleBlog.subTitle}
             </p>
-            <div className="py-10">
+            <div className="py-7 MarGin">
               <Image
                 src={blog.singleBlog.avatar}
                 alt="Image"
-                width={900}
-                height={600}
+                width={0}
+                height={0}
               />
             </div>
+
             <div className="single-post-blog-data">
               <div className="single-post-blog-cat">
                 {blog.singleBlog.category}
+                
               </div>
+             
               <div className="single-post-blog-date">
                 {new Date(blog.singleBlog.createdAt).toDateString()}
               </div>
             </div>
 
-            <div className="content text-gray-600 text-lg flex flex-col gap-4">
-              {edit && (
-                <>
-                  <div className={selected ? "contentShow" : "contentHide"}>
 
 
+            <div className="SinglePageDesc">
+              <>
+                <div
+                  dangerouslySetInnerHTML={createMarkup(blog.singleBlog.desc)}
+                ></div>
 
-
-
-                    <div
-                      dangerouslySetInnerHTML={createMarkup(
-                        blog.singleBlog.desc
-                      )}
-                    ></div>
-
-
-
-
-
-
-                  </div>
-                  <div className="singleBlogDiv" onClick={() => handle()}>
-                    <p style={{ color: "blue", cursor: "pointer" }}>
-                      {selected ? "Read Less" : "Read More...."}
-                    </p>
-                  </div>
-                  
-                </>
-              )}
+                <div className="singleBlogDiv">
+                  <p style={{ color: "blue", cursor: "pointer" }}></p>
+                </div>
+              </>
             </div>
           </div>
           <Related></Related>
@@ -87,8 +68,7 @@ const singleBlog = ({ blog }) => {
 export default singleBlog;
 
 export async function getServerSideProps({ params }) {
-  const response = await fetch(`https://next-blog-liard-theta-11.vercel.app//api/blog/${params.slug}`);
+  const response = await fetch(`http://localhost:3000/api/blog/${params.slug}`);
   const data = await response.json();
   return { props: { blog: data } };
 }
-

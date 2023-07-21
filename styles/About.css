@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .MainParentDiv {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: grid;
+    align-items: center;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .AboutPageContent {
+    object-fit: cover;
+    padding: 20px;
+  }
+  .AboutPageContent h3 {
+    color: #6e68af;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .AboutPageContent h2 {
+    color: #6e68af;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .AboutPageContent p {
+    font-size: 15px;
+  }
+  .AboutPageImage {
+    padding: 20px;
+    object-fit: cover;
+  }
+  .AboutPageImage img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .SubParent {
+    padding: 20px;
+  }
+  .SubParent h2 {
+    color: #6e68af;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .SubParent p {
+    font-size: 15px;
+  }
+  
+  @media (max-width: 851px) {
+    .MainParentDiv {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -17,60 +17,64 @@ const Header = () => {
   return (
     <>
       <Toaster />
-      <header className="bg-gray-50">
-        <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
-          <div className="md:flex-none w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
-            <h1 className="head">Bucket Blogs</h1>
+      <div className="header">
+        <nav>
+          <div className="logo">
+            <h1>Bucket Blogs</h1>
           </div>
 
           {data?.user ? (
-            <>
-              <div className="order-3 flex justify-center">
-                <div className="flex gap-6">
-                  <Link className="nav-links" href="/">
-                    Home
-                  </Link>
-                  <Link className="nav-links" href="/">
-                    About
-                  </Link>
-                  <Link className="nav-links" href="/create">
-                    Write
-                  </Link>
-                  <Link className="nav-links" href="/register">
-                    Register
-                  </Link>
-
-                  <span
-                    children
-                    className="nav-links"
-                    style={{ cursor: "pointer" }}
-                    onClick={HandleSignOut}
-                  >
-                    Log out
-                  </span>
-                </div>
-              </div>
-              <div className="profileBox order-3">
-                <h4 className="profile"> {data?.user?.name.charAt(0)} </h4>
-                <Link href={"/dashboard"} style={{ textDecoration: "none" }}>
-                  <span className="userName"> {data?.user?.name} </span>
-                </Link>
-              </div>
-            </>
+            <div className="links">
+              <Link className="nav-links" href="/">
+                Home
+              </Link>
+              <Link className="nav-links" href="/">
+                About
+              </Link>
+              <Link className="nav-links" href="/create">
+                Write
+              </Link>
+              <Link className="nav-links" href="/register">
+                Register
+              </Link>
+              <span
+                children
+                className="nav-links"
+                style={{ cursor: "pointer", border:"1px solid #56B85D" , backgroundColor:"#56B85D", padding:"3px 10px", color:"white",borderRadius:"5px" }}
+                onClick={HandleSignOut}
+              >
+                Log out
+              </span>
+            </div>
           ) : (
             <>
-              <div className="flex gap-6 order-3">
-                <Link className="nav-links" href="/">
-                  Home
-                </Link>
-                <Link className="nav-links" href="/">
-                  About
-                </Link>
-              </div>
+            <div className="nav-links-logout">
+            <Link className="nav-links" href="/">
+                Home
+              </Link>
+              <Link className="nav-links" href="/About">
+                About
+              </Link>
+              <Link
+                href={"/login"}
+                
+                className="nav-links"
+                style={{ cursor: "pointer", border:"1px solid #56B85D" , backgroundColor:"#56B85D", padding:"3px 10px", color:"white",borderRadius:"5px" }}
+              >
+                Login
+              </Link>
+
+            </div>
+          
             </>
           )}
-        </div>
-      </header>
+
+          <div className="HeaderHamMenu">
+          <i class="fa-solid fa-bars"></i> 
+
+          </div>
+        </nav>
+      </div>
     </>
   );
 };

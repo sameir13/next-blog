@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -129,21 +132,7 @@
   transition: 0.2s;
   border-radius: 10px;
 }
-.single-post-blog-data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.single-post-blog-cat {
-  padding: 2px 20px;
-  color: white;
-  background-color: rgb(235, 108, 72);
-  border-radius: 15px;
-}
-.single-post-blog-date {
-  border-bottom: 1px solid black;
-}
+
 .mainbox {
   height: 100%;
 }
@@ -371,18 +360,14 @@
   font-size: 18px;
 }
 
-.contentShow {
-  min-height: fit-content;
-  transition: all 1.5s ease-in-out;
-  overflow: hidden;
-}
-.contentHide {
-  filter: blur(0.1rem);
-  max-height: 445px;
-  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
-  overflow: hidden;
-}
-
 .App {
   padding: 30px 40px;
+}
+
+.MaxPad {
+  max-width: 1200px;
+  padding: 50px 0px;
+}
+.DivAligns {
+  padding: 18px;
 }

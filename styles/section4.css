@@ -1,0 +1,12 @@
+.SingleBlogMainTitle{
+    color: rgb(59, 59, 59);
+    font-size: 20px;
+}
+@media (max-width:727px) {
+
+    .SingleBlogMainTitle{
+        font-size: 17px;
+
+    }
+    
+}
