@@ -15,7 +15,7 @@ const dashboard = ({ data }) => {
   const HandleDelete = async (slug) => {
     try {
       if (window.confirm("Do you want to delete blog") === true) {
-        const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+        const res = await fetch(`https://next-blog-hazel-kappa.vercel.app//api/blog/${slug}`, {
           method: "DELETE",
         });
 
@@ -85,7 +85,7 @@ const dashboard = ({ data }) => {
 export default dashboard;
 
 export async function getServerSideProps() {
-  const response = await fetch("http://localhost:3000/api/getallblogs");
+  const response = await fetch("https://next-blog-hazel-kappa.vercel.app//api/getallblogs");
   const data = await response.json();
   return { props: { data } };
 }

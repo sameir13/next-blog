@@ -34,7 +34,7 @@ const Section1 = ({ props }) => {
                       src={v.avatar}
                       alt="Image"
                       className="h-full w-full object-cover"
-                      height={500}
+                      height={600}
                       width={560}
                     />
                   </Link>
