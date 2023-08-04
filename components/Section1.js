@@ -1,59 +1,37 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 import Author from "./_child/Author";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Link from "next/link";
 
-const Section1 = ({ props }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
+const Section1 = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto md:px-20 p-2">
-        <h1 className="font-bold text-4xl pb-12 text-center ">Trending</h1>
-
-        <Slider {...settings}>
-          
-          {props?.Blog?.map((v) => {
-            return (
-              <div className="MainSec1SliderDiv" key={v._id}>
- 
-                <div className="MainSiderImagediv MaxSection1">
-                  <Link href={"#"}>
-                    <Image
-                      src={v.avatar}
-                      alt="Image"
-                      className="h-full w-full object-cover"
-                      height={600}
-                      width={560}
-                    />
-                  </Link>
-                </div>
-
-              
-                    <Link
-                      className="Category"
-                      href={"/"}
-                    >
-                      {v.category}
-                    </Link>
-                  
-              </div>
-            );
-          })}
-                  </Slider>
+    <section className="">
+      <div className="Section-1-textbox">
+        <h1>Trending</h1>
       </div>
+      <div className="Slider-section-1 MaxPad-2">
+        <div className="SectionSliderImage">
+          <img src="/images/landscape.jpg"></img>
+          <div className="categorySection1">Programming</div>
+          <div className="daySection1">Aug</div>
+        </div>
+        <div className="SliderTextbox">
+          <div className="DateSectionOne">
+            <p>Wed jul 12 2023</p>
+          </div>
 
+          <div className="TitleSectionOne">
+            <Link href={"/"}>
+              <h1>
+                7 Cool HTML Elements Nobody Uses 7 Cool HTML Elements Nobody
+                Uses
+              </h1>
+            </Link>
+          </div>
+          <div className="AuthorDivOne">
+            <Author></Author>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

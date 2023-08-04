@@ -9,12 +9,18 @@
     padding: 50px 20px;
 }
 .MarGin{
-   display: grid;
-   place-items: center;
+  object-fit: cover;
+
+ 
+   /* display: grid;
+   
+   place-items: center; */
 }
 .MarGin img{
-width: 100%;
-height: auto;
+  max-width: 100%;
+  max-height: 100%;
+/* width: 100%;
+height: auto; */
 border-radius: 20px;
 }
 .single-post-blog-data {

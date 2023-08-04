@@ -381,3 +381,11 @@ border-bottom: 1px solid blue;
 .DivAligns {
   padding: 18px;
 }
+
+
+.MaxPad-2 {
+  
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px 20px;
+}
