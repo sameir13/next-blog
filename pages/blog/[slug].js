@@ -24,27 +24,37 @@ const singleBlog = ({ blog }) => {
             <p className="text-gray-500 text-xl text-center py-5">
               {blog.singleBlog.subTitle}
             </p>
-            <div className="py-7 MarGin">
-              <Image
-                src={blog.singleBlog.avatar}
-                alt="Image"
-                width={0}
-                height={0}
-              />
+
+            <div className="singlePostImage">
+              <img src={blog.singleBlog.avatar} alt="Image" />
             </div>
 
-            <div className="single-post-blog-data">
-              <div className="single-post-blog-cat">
-                {blog.singleBlog.category}
+            <div className="SinglePostShareDash">
+              <div className="DashBoardMain">
+                <div className="dashMain-1">
+                  <div className="dashContent">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Like</span>
+                  </div>
+                  <div className="dashContent">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Comment</span>
+                  </div>
+                </div>
+
+                <div className="dashMain-2">
+                  <div className="dashContentSub">
+                    <i class="fa-regular fa-share-from-square"></i>
+                    <span>Share</span>
+                  </div>
+                  <div className="dashContentSub">
+                    <i class="fa-solid fa-headphones-simple"></i>
+                    <span>Listen</span>
+                  </div>
                 
-              </div>
-             
-              <div className="single-post-blog-date">
-                {new Date(blog.singleBlog.createdAt).toDateString()}
+                </div>
               </div>
             </div>
-
-
 
             <div className="SinglePageDesc">
               <>
@@ -67,7 +77,9 @@ const singleBlog = ({ blog }) => {
 export default singleBlog;
 
 export async function getServerSideProps({ params }) {
-  const response = await fetch(`https://next-blog-hazel-kappa.vercel.app//api/blog/${params.slug}`);
+  const response = await fetch(
+    `https://next-blog-hazel-kappa.vercel.app//api/blog/${params.slug}`
+  );
   const data = await response.json();
   return { props: { blog: data } };
 }
