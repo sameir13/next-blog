@@ -1,27 +1,77 @@
+.MainSec2CardGrid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.images {
+  position: relative;
+  & p {
+    position: absolute;
+    border-radius: 5px;
+    color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-.MainSec2CardGrid{
+    padding: 1px 10px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.Section2-CardContent {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.DateSection {
+  margin: 20px 0 0 0;
+  color: gray;
+
+}
+.Section2CardTitle{
+    font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .MainSec2CardGrid {
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
 }
-@media (max-width:1024px) {
-
-    .MainSec2CardGrid{
-        display: grid;
-        place-items: center;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-    
+@media (max-width: 600px) {
+  .MainSec2CardGrid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
-@media (max-width:600px) {
 
-    .MainSec2CardGrid{
-        display: grid;
-        place-items: center;
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
+.tag-brown {
+  background-color: #47bcd4;
+}
+.tag-red {
+  background-color: #5c74bc;
+}
+.tag-blue {
+  background-color: blue;
+}
+.tag-pink {
+  background-color: #c8589a;
+}
+.tag-purple {
+  background-color: purple;
+}
+.tag-teal {
+  background-color: teal;
+}
+.tag-brown {
+  background-color: #5bcd6c;
+}
+.tag-red {
+  background-color: #ff5050;
+}
+.tag-blue {
+  background-color: blue;
 }

@@ -22,7 +22,12 @@ const create = () => {
   
   const [loader, setloader] = useState(false);
   const [content, setContent] = useState("");
+
+
   const [tempImage, setTempImage] = useState("");
+  console.log(tempImage)
+
+  console.log(tempImage)
 
   const [formData, setformData] = useState({
     title: "",
@@ -58,6 +63,7 @@ const create = () => {
       );
 
       const jsonRes = await res.json();
+      console.log(jsonRes.secure_url)
       return jsonRes.secure_url;
     } catch (error) {
       alert("something went wrong with the image");

@@ -7,6 +7,8 @@ import Section3 from "../components/Section3";
 import Section4 from "../components/Section4";
 
 const index = ({ data }) => {
+
+  
  console.log(data)
   return (
     <Format>
